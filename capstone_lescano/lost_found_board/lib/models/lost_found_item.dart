@@ -25,7 +25,7 @@ List<LostFoundItem> demoItems() {
      description: 'Lost near the school library.',
      contact: 'demo01@example.com',
      imageUrl:
-         'https://placehold.co/600x400/333333/FFFFFF.png?text=Black+Wallet',
+         'https://www.istockphoto.com/photos/black-leather-wallet-on-wooden-table',
      type: ItemType.lost,
    ),
    LostFoundItem(
