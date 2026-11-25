@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../models/lost_found_item.dart';
 
@@ -58,8 +57,12 @@ class _PostItemScreenState extends State<PostItemScreen> {
           children: [
             const Text(
               'Item Type',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+
             const SizedBox(height: 10),
 
             Wrap(
@@ -133,6 +136,9 @@ class _PostItemScreenState extends State<PostItemScreen> {
             TextFormField(
               controller: _imageUrlController,
               keyboardType: TextInputType.url,
+              onChanged: (value) {
+                setState(() {});
+              },
               decoration: const InputDecoration(
                 labelText: 'Image URL',
                 hintText: 'https://example.com/image.jpg',
@@ -148,7 +154,8 @@ class _PostItemScreenState extends State<PostItemScreen> {
 
                 if (uri == null ||
                     !uri.hasScheme ||
-                    !(uri.scheme == 'http' || uri.scheme == 'https') ||
+                    !(uri.scheme == 'http' ||
+                        uri.scheme == 'https') ||
                     uri.host.isEmpty) {
                   return 'Enter a valid image URL';
                 }
@@ -159,10 +166,11 @@ class _PostItemScreenState extends State<PostItemScreen> {
 
             const SizedBox(height: 15),
 
-            if (_imageUrlController.text.isNotEmpty)
+            if (_imageUrlController.text.trim().isNotEmpty)
               Image.network(
-                _imageUrlController.text,
+                _imageUrlController.text.trim(),
                 height: 160,
+                fit: BoxFit.contain,
                 errorBuilder: (_, __, ___) =>
                     const Text('Image preview unavailable'),
               ),

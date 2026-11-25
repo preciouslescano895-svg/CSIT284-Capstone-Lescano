@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "610474765019",
+    "project_id": "lost-found-board-lescano",
+    "storage_bucket": "lost-found-board-lescano.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610474765019:android:e83f5cb63d4f83e4593afe",
+        "android_client_info": {
+          "package_name": "com.example.lost_found_board"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhhfGICjJsso-Va-ED8UeOLdcduKxMh3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

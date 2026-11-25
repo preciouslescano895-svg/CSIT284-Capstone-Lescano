@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   image_picker: ^1.2.0
+  firebase_core: ^5.2.0
+  cloud_firestore: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -25,5 +27,5 @@ flutter:
   uses-material-design: true
 
   assets:
-    -assets/images/
+    - assets/images/
      
